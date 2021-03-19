@@ -18,10 +18,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     sudo \
     tmux \
  && rm -rf /var/lib/apt/lists/* \
- && chmod +x /docker-entry-point.sh
-
-    
-#COPY . /daml 
+ && chmod +x /docker-entry-point.sh \
+ && pip3 install -U --no-cache posix_ipc
 
 #CMD ["bin/bash"]
 
